@@ -6,7 +6,11 @@ Additional ASCII cowfiles for [cowsay](http://en.wikipedia.org/wiki/Cowsay).
 First, download and install `cowsay`.
 
 - OSX: `brew install cowsay`
-- GNU/Linux: `sudo apt-get install cowsay`, `pacman -S cowsay`, `dnf install cowsay`, etc.
+- GNU/Linux:
+    - Debian based distros (Ubuntu): `sudo apt-get install cowsay`
+    - Arch based distros: `pacman -S cowsay` 
+    - RHEL/CentOS based distros: `dnf install cowsay`
+    - OpenSUSE: `zypper install cowsay`
 
 Next, you need to place the cowfiles somewhere that `cowsay` can locate them. I recommend creating a `.cowsay` folder under your home directory. Clone the contents of this repo in that folder:
 
@@ -14,7 +18,7 @@ Next, you need to place the cowfiles somewhere that `cowsay` can locate them. I 
 
 Now, add the new folder to your $COWPATH environment variable. Append this line to your shell's configuration file (.bashrc, .zshrc, .cshrc).
 
-    COWPATH="$COWPATH:$HOME/.cowsay"
+    COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
 
 ## As MOTD
 If you have [`fortune`](http://en.wikipedia.org/wiki/Fortune_(Unix)) installed, here is a simple bash function that you can place in your shell's appropriate dotfile (bashrc, zshrc, cshrc) that will give you a useful quip from a funky cow whenever you open a new terminal session.
